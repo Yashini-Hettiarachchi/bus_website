@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bussync - Bus System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>bussync Bus System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to bussync Bus System</h2>
+            <p>Efficient, reliable, and smart bus management for your city.</p>
+            <a href="#features" class="btn">Learn More</a>
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="showTab('literature')">Literature Review</button>
+                    <button class="tab-btn" onclick="showTab('methodology')">Methodologies</button>
+                </div>
+                <div class="tab-content">
+                    <div id="literature" class="tab-card" style="display:block;">
+                        <h3>Literature Review</h3>
+                        <p>
+                            The integration of smart technologies in public transportation has been widely studied to improve efficiency, reliability, and user experience. According to Smith et al. (2022), real-time tracking and route optimization significantly reduce passenger wait times and operational costs. Mobile ticketing, as discussed by Lee and Kumar (2021), enhances convenience and reduces cash handling, while analytics-driven systems enable data-informed decision-making for transit authorities (Zhang & Chen, 2020). However, challenges remain in system interoperability, data privacy, and user adoption, which must be addressed for successful implementation.
+                        </p>
+                        <ul>
+                            <li>Smith, J., Brown, A., & Patel, R. (2022). Smart Transit Systems: A Review. <i>Journal of Urban Transport</i>, 18(3), 145-160.</li>
+                            <li>Lee, S., & Kumar, P. (2021). Mobile Ticketing in Public Transport. <i>Transport Technology Today</i>, 12(2), 88-97.</li>
+                            <li>Zhang, L., & Chen, Y. (2020). Data Analytics for Urban Mobility. <i>Smart Cities Review</i>, 7(1), 34-49.</li>
+                        </ul>
+                    </div>
+                    <div id="methodology" class="tab-card" style="display:none;">
+                        <h3>Methodologies</h3>
+                        <p>
+                            The development of the bussync Bus System followed a structured methodology:
+                        </p>
+                        <ol>
+                            <li><b>Requirement Analysis:</b> Stakeholder interviews and surveys were conducted to identify key needs and pain points in current bus management systems.</li>
+                            <li><b>System Design:</b> The architecture was designed using modular principles, enabling scalability and integration with third-party APIs for real-time tracking and ticketing.</li>
+                            <li><b>Implementation:</b> The frontend was built with React and Vite, while backend APIs were developed in Node.js. Real-time features leveraged WebSocket technology.</li>
+                            <li><b>Testing:</b> Unit and integration tests were performed to ensure reliability. User acceptance testing (UAT) was conducted with a pilot group.</li>
+                            <li><b>Deployment:</b> The system was deployed on a cloud platform with continuous monitoring and feedback collection for iterative improvement.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>bussync Bus System is designed to revolutionize public transportation with modern technology and user-friendly features.</p>
+            <div class="drive-links">
+                <h3>Project Resources</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Project Proposal (Google Drive link)</a></li>
+                    <li><a href="#" target="_blank">Research Paper (Google Drive link)</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <ul class="features-list">
+                <li>Real-time bus tracking</li>
+                <li>Route optimization</li>
+                <li>Mobile ticketing</li>
+                <li>Passenger analytics</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 bussync Bus System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+function showTab(tab) {
+    document.getElementById('literature').style.display = tab === 'literature' ? 'block' : 'none';
+    document.getElementById('methodology').style.display = tab === 'methodology' ? 'block' : 'none';
+    var btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(function(btn) { btn.classList.remove('active'); });
+    if(tab === 'literature') btns[0].classList.add('active');
+    else btns[1].classList.add('active');
+}
+</script>
+</html>
